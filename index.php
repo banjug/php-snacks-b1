@@ -121,9 +121,13 @@
                 ]
             ],
         ];
-        foreach ($posts as $k => $v) {
-            echo '<h3>' . $k . '</h3>';
-            
+        foreach ($posts as $data => $postarray) {
+            echo '<h3>' . $data . '</h3>';
+            foreach ($postarray as $postarray => $singolopost) {
+                foreach ($singolopost as $nomedati => $dati) {
+                    echo '<p>' . $dati . '</p>';
+                }
+            }
         }
     ?>
     <!-- ## Snack 4
