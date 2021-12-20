@@ -139,8 +139,8 @@
             for ($i = 0; $i < count($randomNumbers); $i++) {
                 echo '<li>' . $randomNumbers[$i] . '</li>';
             }
-            return $randomNumbers;
             echo '</ul>';
+            return $randomNumbers;
         }
         randomArray(1, 100, 15);
     ?>
