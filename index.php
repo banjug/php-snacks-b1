@@ -13,7 +13,38 @@
     
     Olimpia Milano - Cantù | 55-60 -->
 
+    <h2>Snack 1</h2>
     <?php
+
+        $tappa = [
+            [
+                'home' => 'casa0',
+                'away' => 'ospiti0',
+                'homePoints' => 10,
+                'awayPoints' => 10,
+            ],
+            [
+                'home' => 'casa1',
+                'away' => 'ospiti1',
+                'homePoints' => 20,
+                'awayPoints' => 20,
+            ],
+            [
+                'home' => 'casa2',
+                'away' => 'ospiti2',
+                'homePoints' => 30,
+                'awayPoints' => 30,
+            ],
+            [
+                'home' => 'casa3',
+                'away' => 'ospiti3',
+                'homePoints' => 40,
+                'awayPoints' => 40,
+            ],
+        ];
+        for ($i = 0; $i < count($tappa); $i++) {
+            echo '<p>' . $tappa[$i]['home'] . ' - ' . $tappa[$i]['away'] . ' | ' . $tappa[$i]['homePoints'] . ' - ' . $tappa[$i]['awayPoints'] . '</p>';
+        };
 
     ?>
     
