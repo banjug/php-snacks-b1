@@ -150,13 +150,15 @@
     <!-- ## Snack 5
     
     Prendere un paragrafo abbastanza lungo, contenente diverse frasi. Prendere il paragrafo e suddividerlo in tanti paragrafi. Ogni punto un nuovo paragrafo. -->
-    <h2>Snack 5</h2>
-    
+    <h2>Snack 5</h2>    
     <?php
         $paragraph = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, aspernatur temporibus sequi aliquid cupiditate et. Facilis repellat aspernatur dolores labore ut perferendis laborum et commodi consectetur nemo, sed velit, modi voluptatibus minima beatae voluptates necessitatibus maiores in mollitia maxime esse, eligendi molestiae perspiciatis corporis? Eum dolores voluptates quam laudantium ullam possimus? Sequi excepturi consectetur molestiae quos, minus ut quibusdam praesentium eius optio mollitia rem. Ipsa quod nobis neque temporibus nihil officiis totam doloribus corporis libero laborum voluptates, odio dolorem voluptas tempora dolorum autem, facilis voluptate ipsam. Eos quis maxime ex, quia aut esse non aspernatur consequatur ad vero quae quibusdam.';
+
         echo '<h3>Paragrafo</h3>';
         echo '<p>' . $paragraph . '</p>';
+
         echo '<h3>Paragrafo Diviso</h3>';
+
         $phrases = explode('.', $paragraph);
         echo '<ul>';
             for ($i = 0; $i < count($phrases); $i++) {
@@ -168,13 +170,63 @@
     <!-- ## Snack 6
     
     Utilizzare questo array: https://pastebin.com/CkX3680A. Stampiamo il nostro array mettendo gli insegnanti in un rettangolo grigio e i PM in un rettangolo verde. -->
+    <h2>Snack 6</h2>    
     <?php
-        
+        $db = [
+            'teachers' => [
+                [
+                    'name' => 'Michele',
+                    'lastname' => 'Papagni'
+                ],
+                [
+                    'name' => 'Fabio',
+                    'lastname' => 'Forghieri'
+                ]
+            ],
+            'pm' => [
+                [
+                    'name' => 'Roberto',
+                    'lastname' => 'Marazzini'
+                ],
+                [
+                    'name' => 'Federico',
+                    'lastname' => 'Pellegrini'
+                ]
+            ]
+        ];        
     ?>
     <!-- ## Snack 7
     
     Creare un array contenente qualche alunno di un'ipotetica classe. Ogni alunno avrà Nome, Cognome e un array contenente i suoi voti scolastici. Stampare Nome, Cognome e la media dei voti di ogni alunno. -->
+    <h2>Snack 7</h2>    
     <?php
+        $students = [
+            [
+                'name' => 'nome0',
+                'lastName' => 'cognome0',
+                'grades' => [19, 15, 18, 26, 30]
+            ],
+            [
+                'name' => 'nome1',
+                'lastName' => 'cognome1',
+                'grades' => [19, 15, 18, 26, 30]
+            ],
+            [
+                'name' => 'nome2',
+                'lastName' => 'cognome2',
+                'grades' => [19, 15, 18, 26, 30]
+            ],
+            [
+                'name' => 'nome3',
+                'lastName' => 'cognome3',
+                'grades' => [19, 15, 18, 26, 30]
+            ],
+            [
+                'name' => 'nome4',
+                'lastName' => 'cognome4',
+                'grades' => [19, 15, 18, 26, 30]
+            ],
+        ];
         
     ?>
 </body>
