@@ -20,8 +20,31 @@
     <!-- ## Snack 2
     
     Passare come parametri GET name, mail e age e verificare (cercando i metodi che non conosciamo nella documentazione) che name sia più lungo di 3 caratteri, che mail contenga un punto e una chiocciola e che age sia un numero. Se tutto è ok stampare "Accesso riuscito", altrimenti "Accesso negato" -->
+    <h2>Snack 2</h2>
     <?php
+        $name=$_GET['name'];
+        $mail=$_GET['mail'];
+        $age=$_GET['age'];
 
+        $nameOk=false;
+        if(strlen($name)>3){
+            $nameOk=true;
+        };
+        $mailOk=false;
+        if(strpos($mail,'@')!==false&&strpos($mail,'.')!==false){
+            $mailOk=true;
+        };
+        $ageOk=false;
+        if(is_numeric($age)){
+            $ageOk=true;
+        };
+
+        if($nameOk===true&&$mailOk===true&&$ageOk===true){
+            echo '<p>Accesso Riuscito</p>';
+        }else{
+            echo '<p>Accesso Negato</p>';
+        }
+        
     ?>
     <!-- ## Snack 3
     
