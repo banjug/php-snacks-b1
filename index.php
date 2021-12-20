@@ -121,9 +121,9 @@
                 ]
             ],
         ];
-        $datesArray = array_keys($posts);
-        for ($i = 0; $i < count($posts); $i ++) {
-            echo '<h3>' . $datesArray[$i] . '</h3>';
+        foreach ($posts as $k => $v) {
+            echo '<h3>' . $k . '</h3>';
+            
         }
     ?>
     <!-- ## Snack 4
