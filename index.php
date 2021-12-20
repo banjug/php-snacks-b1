@@ -126,7 +126,23 @@
     
     Creare un array con 15 numeri casuali, tenendo conto che l'array non dovrà contenere lo stesso numero più di una volta -->
     <?php
-        
+
+        function randomArray($min, $max, $items,) {
+            $randomNumbers = [];
+            while (count($randomNumbers) < $items) {
+                $num = rand($min, $max);
+                if (!in_array($num, $randomNumbers)) {
+                    $randomNumbers[] = $num;
+                }
+            }
+            echo '<ul>';
+            for ($i = 0; $i < count($randomNumbers); $i++) {
+                echo '<li>' . $randomNumbers[$i] . '</li>';
+            }
+            return $randomNumbers;
+            echo '</ul>';
+        }
+        randomArray(1, 100, 15);
     ?>
     <!-- -------------------------------------------------------[OPZIONALI]------------------------------------------------------- -->
     
