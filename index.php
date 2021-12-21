@@ -177,16 +177,23 @@
 
         echo '<h3>Paragrafo Diviso</h3>';
 
+        // $phrases = explode('.', $paragraph);
+        // echo '<ul>';
+        //     for ($i = 0; $i < count($phrases); $i++) {
+        //         $phrase = $phrases[$i];
+        //     if (strlen($phrase) > 0) { 
+        //         echo '<li>' . $phrase . '.</li>';
+        //     };
+        // }
+        // echo '</ul>';  
+
         $phrases = explode('.', $paragraph);
         echo '<ul>';
-            for ($i = 0; $i < count($phrases); $i++) {
-                $phrase = $phrases[$i];
-            if (strlen($phrase) > 0) { 
+            foreach ($phrases as  $phrase) {
+                if (strlen($phrase) > 0)
                 echo '<li>' . $phrase . '.</li>';
-            };
-        }
-        // stampa un elemento un più perché divide anche dopo il punto finale tenendo un elemento vuoto
-        echo '</ul>';  
+            }        
+        echo '</ul>';
     ?>
     <!-- ## Snack 6
     
