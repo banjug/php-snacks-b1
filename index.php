@@ -180,7 +180,10 @@
         $phrases = explode('.', $paragraph);
         echo '<ul>';
             for ($i = 0; $i < count($phrases); $i++) {
-            echo '<li>' . $phrases[$i] . '</li>';
+                $phrase = $phrases[$i];
+            if (strlen($phrase) > 0) { 
+                echo '<li>' . $phrase . '.</li>';
+            };
         }
         // stampa un elemento un più perché divide anche dopo il punto finale tenendo un elemento vuoto
         echo '</ul>';  
