@@ -222,15 +222,24 @@
                 ]
             ]
         ];
-        foreach ($db as $key => $lists) {
-            foreach ($lists as $teacher) {
-                if ($key === 'teachers') {
-                    echo '<div style="background-color: gray;">' . $teacher['name'] . $teacher['lastname'] . '</div>';
-                } else {
-                    echo '<div style="background-color: green;">' . $teacher['name'] . $teacher['lastname'] . '</div>';
-                }
-            }
-        }
+        // foreach ($db as $key => $lists) {
+        //     foreach ($lists as $teacher) {
+        //         if ($key === 'teachers') {
+        //             echo '<div style="background-color: gray;">' . $teacher['name'] . $teacher['lastname'] . '</div>';
+        //         } else {
+        //             echo '<div style="background-color: green;">' . $teacher['name'] . $teacher['lastname'] . '</div>';
+        //         }
+        //     }
+        // };
+
+        $teachers = $db['teachers'];
+        foreach ($teachers as $teacher) {
+            echo '<div style="background-color: gray;">' . $teacher['name'] . $teacher['lastname'] . '</div>';
+        };
+        $pms = $db['pm'];
+        foreach ($pms as $pm) {
+            echo '<div style="background-color: green;">' . $pm['name'] . $pm['lastname'] . '</div>';
+        };
     ?>
     
     <!-- ## Snack 7
