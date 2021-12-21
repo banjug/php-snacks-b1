@@ -221,8 +221,18 @@
                     'lastname' => 'Pellegrini'
                 ]
             ]
-        ];        
+        ];
+        foreach ($db as $key => $lists) {
+            foreach ($lists as $teacher) {
+                if ($key === 'teachers') {
+                    echo '<div style="background-color: gray;">' . $teacher['name'] . $teacher['lastname'] . '</div>';
+                } else {
+                    echo '<div style="background-color: green;">' . $teacher['name'] . $teacher['lastname'] . '</div>';
+                }
+            }
+        }
     ?>
+    
     <!-- ## Snack 7
     
     Creare un array contenente qualche alunno di un'ipotetica classe. Ogni alunno avrà Nome, Cognome e un array contenente i suoi voti scolastici. Stampare Nome, Cognome e la media dei voti di ogni alunno. -->
