@@ -265,6 +265,23 @@
                 'grades' => [19, 15, 18, 26, 30]
             ],
         ];
+
+        foreach ($students as $student) {
+            echo '<ul>';
+            foreach ($student as $key => $value) {
+                if ($key === 'grades') {
+                    $average = 0;
+                    foreach ($value as $voto) {
+                        $average += $voto;
+                    };
+                    $average = $average / count($value);
+                    echo '<li>' . $average . '</li>';
+                } else {
+                    echo '<li>' . $value . '</li>';
+                }
+            }
+            echo '</ul>';
+        }
         
     ?>
 </body>
