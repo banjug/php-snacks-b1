@@ -121,12 +121,22 @@
                 ]
             ],
         ];
-        foreach ($posts as $data => $postarray) {
-            echo '<h3>' . $data . '</h3>';
-            foreach ($postarray as $postarray => $singolopost) {
-                foreach ($singolopost as $nomedati => $dati) {
-                    echo '<p>' . $dati . '</p>';
-                }
+        // foreach ($posts as $data => $postarray) {
+        //     echo '<h3>' . $data . '</h3>';
+        //     foreach ($postarray as $postarray => $singolopost) {
+        //         foreach ($singolopost as $nomedati => $dati) {
+        //             echo '<p>' . $dati . '</p>';
+        //         }
+        //     }
+        // }
+        $dates = array_keys($posts);
+        for ($i = 0; $i < count($dates); $i++) {
+            $date = $dates[$i];
+            echo '<h3>' . $date . '</h3>';
+            $subPosts = $posts[$date];
+            for ($j = 0; $j < count($subPosts); $j++) {
+                $post = $subPosts[$j];
+                echo '<h4>' . $post['title'] . '</h4>' . '<p>' . $post['author'] . '</p>' . '<p>' . $post['text'] . '</p>';
             }
         }
     ?>
